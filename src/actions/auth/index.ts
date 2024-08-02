@@ -25,7 +25,7 @@ export const onCompleteUserRegistration = async (
         type: true,
       },
     })
-
+    console.log(registered,"registered")
     if (registered) {
       return { status: 200, user: registered }
     }

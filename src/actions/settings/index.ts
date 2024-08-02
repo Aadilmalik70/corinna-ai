@@ -3,7 +3,9 @@ import { client } from '@/lib/prisma'
 import { clerkClient, currentUser } from '@clerk/nextjs'
 
 export const onIntegrateDomain = async (domain: string, icon: string) => {
+  console.log("user")
   const user = await currentUser()
+  console.log("user",user)
   if (!user) return
   try {
     const subscription = await client.user.findUnique({

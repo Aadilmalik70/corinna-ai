@@ -37,6 +37,7 @@ export const useDomain = () => {
     setLoading(true)
     const uploaded = await upload.uploadFile(values.image[0])
     const domain = await onIntegrateDomain(values.domain, uploaded.uuid)
+    console.log("domain",domain)
     if (domain) {
       reset()
       setLoading(false)
